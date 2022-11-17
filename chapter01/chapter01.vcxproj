@@ -143,6 +143,9 @@
     <ClCompile Include="1_1Decltype.cpp" />
     <ClCompile Include="1_1Return.cpp" />
     <ClCompile Include="1_2.cpp" />
+    <ClCompile Include="1_3.cpp" />
+    <ClCompile Include="1_4.cpp" />
+    <ClCompile Include="1_5.cpp" />
     <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
