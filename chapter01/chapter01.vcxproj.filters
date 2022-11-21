@@ -36,7 +36,16 @@
     <ClCompile Include="1_4.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="1_5.cpp">
+    <ClCompile Include="1_5Function.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="1_5Bind.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="1_6.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="1_7.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

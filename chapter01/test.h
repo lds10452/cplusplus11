@@ -7,4 +7,7 @@ void test1_1Return();
 void test1_2();
 void test1_3();
 void test1_4();
-void test1_5();
+void test1_5Function();
+void test1_5Bind();
+void test1_6();
+void test1_7();
