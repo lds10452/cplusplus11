@@ -67,10 +67,11 @@ public:
 
 void test2_1_2()
 {
-	MyString a;
-	a = MyString("hello");
+	MyString a;//无参
+	a = MyString("hello");//有参，移动
+	MyString aa = a;//拷贝
 	vector<MyString> vec;
-	vec.push_back(MyString("world"));
+	vec.push_back(MyString("world"));//有参，移动
 
 	int c1 = 3;
 	const int c2 = 4;

@@ -23,7 +23,7 @@ public:
 			m_notEmpty.wait(m_mutex);
 		}*/
 		unique_lock<mutex> uniqueLock(m_mutex);//等同上一部分
-		m_notEmpty.wait(uniqueLock, [this] {return !m_queue.empty(); });//参数2为往下执行的条件
+		m_notEmpty.wait(uniqueLock, [this] {return !m_queue.empty(); });//参数2为false阻塞
 		x = m_queue.front();
 		cout << "取数据。。。" << x << endl;
 		m_queue.pop_front();
