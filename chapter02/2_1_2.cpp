@@ -38,7 +38,7 @@ public:
 			m_len = str.m_len;
 			copyData(str.m_data);
 		}
-		cout << "拷贝赋值：" << m_data << endl;
+		cout << "普通赋值重载：" << m_data << endl;
 		return *this;
 	}
 	MyString(MyString&& str)
@@ -56,7 +56,7 @@ public:
 			m_data = str.m_data;
 			str.m_data = NULL;
 		}
-		cout << "移动赋值：" << m_data << endl;
+		cout << "移动赋值重载：" << m_data << endl;
 		return *this;
 	}
 	~MyString()
@@ -67,11 +67,14 @@ public:
 
 void test2_1_2()
 {
-	MyString a;//无参
-	a = MyString("hello");//有参，移动
-	MyString aa = a;//拷贝
+	MyString a;//无参构造
+	a = MyString("hello");//有参构造，移动复制重载
+	MyString aa = a;//拷贝构造
 	vector<MyString> vec;
-	vec.push_back(MyString("world"));//有参，移动
+	vec.push_back(MyString("world"));//有参构造，移动构造
+	cout << vec.capacity() << endl;
+	vec.push_back(move(aa));//移动构造,拷贝构造（因为vec容器扩容，元素需要拷贝到新容器，容器内部存的是左值）
+	cout << vec.capacity() << endl;
 
 	int c1 = 3;
 	const int c2 = 4;
