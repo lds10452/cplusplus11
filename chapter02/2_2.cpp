@@ -1,4 +1,5 @@
 #include "test.h"
+#include <vector>
 
 void test2_2()
 {
@@ -13,4 +14,10 @@ void test2_2()
 		cout << "p is not null" << endl;
 	else
 		cout << "p is null" << endl;//p内部原指针将变成NULL
+
+	vector<int> pVec;
+	pVec.push_back(10);
+	pVec.push_back(20);
+	vector<int> ppVec = move(pVec);
+	cout << pVec.capacity() << " " << ppVec.capacity() << endl;//0 2
 }
