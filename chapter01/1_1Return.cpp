@@ -1,8 +1,10 @@
 #include "test.h"
 
-auto sub(int a, int b)->int
+// R->返回值类型, T->参数1类型, U->参数2类型
+template <typename R, typename T, typename U>
+R sub(T t, U u)
 {
-	return a - b;
+	return t - u;
 }
 
 //返回类型后置的必要性
@@ -27,7 +29,7 @@ arr11* retArray(int mode)
 
 void test1_1Return()
 {
-	cout << sub(3, 2) << endl;	//1
+	cout << sub<decltype(3-2)>(3, 2) << endl;	//1
 	cout << add(1, 2.1) << endl;	//3.1
 	cout << retArray(0)[1][1] << endl;	//5
 	auto arr = retArray(0);
