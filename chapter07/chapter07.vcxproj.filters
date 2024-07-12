@@ -18,10 +18,10 @@
     <ClCompile Include="test.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="x_2.cpp">
+    <ClCompile Include="7_3final_override.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="x_3.cpp">
+    <ClCompile Include="7_2原始字面量.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

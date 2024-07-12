@@ -2,10 +2,8 @@
 
 int main()
 {
-//	testx_1();
-//	testx_2();//nullptr
-	testx_3();//constexpr
-	
+//	test7_2();//原始字面量
+	test7_3();
 	system("pause");
 	return 0;
 }

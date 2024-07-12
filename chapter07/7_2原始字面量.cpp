@@ -1,6 +1,6 @@
 #include "test.h"
 
-void testx_1()
+void test7_2()
 {
     string str = "D:\hello\world\test.text";
     cout << str << endl;//D:helloworld    est.text
