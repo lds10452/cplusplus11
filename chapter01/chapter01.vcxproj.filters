@@ -27,7 +27,7 @@
     <ClCompile Include="1_1Return.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="1_2.cpp">
+    <ClCompile Include="1_2Using.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="1_3.cpp">
@@ -46,6 +46,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="1_7.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="1_2默认模板参数.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

@@ -142,7 +142,7 @@
     <ClCompile Include="1_1Auto.cpp" />
     <ClCompile Include="1_1Decltype.cpp" />
     <ClCompile Include="1_1Return.cpp" />
-    <ClCompile Include="1_2.cpp" />
+    <ClCompile Include="1_2Using.cpp" />
     <ClCompile Include="1_3.cpp" />
     <ClCompile Include="1_4.cpp" />
     <ClCompile Include="1_5Bind.cpp" />
@@ -150,6 +150,7 @@
     <ClCompile Include="1_6.cpp" />
     <ClCompile Include="1_7.cpp" />
     <ClCompile Include="test.cpp" />
+    <ClCompile Include="1_2默认模板参数.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="test.h" />
