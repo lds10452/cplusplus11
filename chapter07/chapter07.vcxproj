@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="7_1委托和继承构造函数.cpp" />
     <ClCompile Include="7_3final_override.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="7_2原始字面量.cpp" />
