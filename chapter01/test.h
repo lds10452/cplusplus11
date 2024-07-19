@@ -6,6 +6,7 @@ void test1_1Decltype();
 void test1_1Return();
 void test1_2Using();
 void test1_2TemplateParameter();
+void test1_3_1();
 void test1_3();
 void test1_4();
 void test1_5Function();

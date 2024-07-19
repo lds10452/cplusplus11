@@ -144,6 +144,7 @@
     <ClCompile Include="1_1Return.cpp" />
     <ClCompile Include="1_2Using.cpp" />
     <ClCompile Include="1_3.cpp" />
+    <ClCompile Include="1_3列表初始化.cpp" />
     <ClCompile Include="1_4.cpp" />
     <ClCompile Include="1_5Bind.cpp" />
     <ClCompile Include="1_5Function.cpp" />

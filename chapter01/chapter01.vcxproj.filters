@@ -51,6 +51,9 @@
     <ClCompile Include="1_2默认模板参数.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="1_3列表初始化.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="test.h">
