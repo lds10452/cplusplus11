@@ -28,7 +28,7 @@ void test4_1_1()
 	shared_ptr<int> p0 = make_shared<int>(10);
 	
 	int* p4 = ptr.get();//*p4=1
-	*ptr = 3; //*p4 = 3;
+	*ptr = 3; //Лђеп*p4 = 3;
 	cout << *ptr << " " << *ptr.get() << " " << *p4 << endl;//3,3,3
 
 	shared_ptr<int> p5(new int[10], [](int* p) {delete[]p; });
