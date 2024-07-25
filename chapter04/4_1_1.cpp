@@ -27,8 +27,9 @@ void test4_1_1()
 	//shared_ptr<int> p3 = new int(1);//error
 	shared_ptr<int> p0 = make_shared<int>(10);
 	
-	int* p4 = ptr.get();
-	cout << *p4 << " " << *p0.get() << " " << ptr.use_count() << endl;//1,10,1
+	int* p4 = ptr.get();//*p4=1
+	*ptr = 3; //*p4 = 3;
+	cout << *ptr << " " << *ptr.get() << " " << *p4 << endl;//3,3,3
 
 	shared_ptr<int> p5(new int[10], [](int* p) {delete[]p; });
 	shared_ptr<int> p6(new int[10], default_delete<int[]>());

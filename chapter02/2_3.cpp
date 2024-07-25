@@ -24,10 +24,8 @@ void test2_3()
 	TestForward(1);
 	int x = 1;
 	TestForward(x);
-	TestForward(std::forward<int>(x));
 	cout << endl;
-	auto a = forward<int>(x);
-	PrintT(a);//lvalue
-	PrintT(forward<int>(a));//right
-	PrintT(forward<int>(x));//right
+	TestForward(forward<int>(x));
+	TestForward(forward<int&>(x));
+	TestForward(forward<int&&>(x));
 }
