@@ -14,7 +14,13 @@ void test4_2()
 	int* temp = new int(1);
 	unique_ptr<int> p(temp);
 	//unique_ptr<int> p1 = p;	//error, 不能复制
-	unique_ptr<int> p2 = move(p);	//只能移动,p不再拥有temp的所有权
+	unique_ptr<int> p2 = move(p);	//通过右值初始化，调移动构造,p不再拥有temp的所有权
+	unique_ptr<int> p3;
+	p3 = move(p2);
+	p3.reset();
+	p3.reset(new int(250));
+	cout << *p3.get() << endl;	// 得到内存地址中存储的实际数值 250
+
 	int* arr = new int[3]{ 1,2,3 };
 	{
 		unique_ptr<int[]>p3(arr);
