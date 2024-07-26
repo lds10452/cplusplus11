@@ -29,16 +29,46 @@ public:
 };
 void test4_3()
 {
-	shared_ptr<int> p1(new int(10));
-	weak_ptr<int> p2(p1);
-	shared_ptr<int> p3 = p1;
-	cout << p2.use_count() << endl;//2，返回p1的引用计数
-	if (p2.expired())//判断所观测的资源是否已经被释放
-		cout << "无效，已被释放" << endl;
-	else
-		cout << "有效" << endl;//
-	cout << *p2.lock() << endl;//10，获取监测资源的值
+	//构造
+	shared_ptr<int> sp(new int);
+	weak_ptr<int> wp1;//默认构造
+	weak_ptr<int> wp2(wp1);//拷贝构造
+	weak_ptr<int> wp3(sp);//有参构造
+	//赋值
+	weak_ptr<int> wp4;
+	wp4 = sp;
+	weak_ptr<int> wp5;
+	wp5 = wp3;
 
+	cout << "wp1: " << wp1.use_count() << endl;//0
+	cout << "wp2: " << wp2.use_count() << endl;//0
+	cout << "wp3: " << wp3.use_count() << endl;//1
+	cout << "wp4: " << wp4.use_count() << endl;//1
+	cout << "wp5: " << wp5.use_count() << endl;//1
+
+	cout << endl;
+	cout << "1. weak " << (wp3.expired() ? "is" : "is not") << " expired" << endl;// is not
+	sp.reset();
+	cout << "2. weak " << (wp3.expired() ? "is" : "is not") << " expired" << endl;//is
+
+	cout << endl;
+	sp.reset(new int(255));
+	wp3 = sp;
+	shared_ptr<int> sp1 = wp3.lock();
+	cout << "use_count: " << wp3.use_count() << endl;//2
+	sp.reset();
+	cout << "use_count: " << wp3.use_count() << endl;//1
+	sp = wp3.lock();
+	cout << "use_count: " << wp3.use_count() << endl;//2
+	cout << "*sp: " << *sp << endl;//255
+	cout << "*sp1: " << *sp1 << endl;//255
+
+	cout << endl;
+	cout << "1. wp " << (wp3.expired() ? "is" : "is not") << " expired" << endl;//is not
+	wp3.reset();
+	cout << "2. wp " << (wp3.expired() ? "is" : "is not") << " expired" << endl;//is
+
+	cout << endl;
 	shared_ptr<A> p4(new A);
 	shared_ptr<A> p5 = p4->GetSelf();
 

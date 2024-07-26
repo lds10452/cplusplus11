@@ -23,7 +23,7 @@ void test4_2()
 
 	int* arr = new int[3]{ 1,2,3 };
 	{
-		unique_ptr<int[]>p3(arr);
+		unique_ptr<int[]>p3(arr);//加[],使用默认删除器,非数组不用加[]
 	}
 	cout << arr[1] << endl;//arr被释放，无效值
 
